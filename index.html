@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/default.css">
+    <title>tecnitec</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <!--
+      <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>  
+    -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+    <header class="fixed-top">
+        <nav class="nav-container">
+           <div class="brand">
+                <a class="navbar-brand" href="#">
+                    <em class="text-muted">
+                    <i class="bi bi-brush"></i>
+                    www.tecnitec.com.co</em>
+                </a>
+                
+                    <button 
+                    class="navbar-toggler fixed-top" 
+                    type="button" 
+                    data-bs-toggle="collapse"
+                    data-bs-target="#gitnav"
+                    aria-controls="gitnav"
+                    aria-label="Toggle navigation"
+                    id="toggler"
+                    >
+                    <input type="checkbox" id="nav" class="hidden">
+                    <label for="nav" class="nav-btn">
+                        <i></i>
+                        <i></i>
+                        <i></i>    
+                    </label>
+                    </button>
+            </div>
+            <ul class="ul-collapse">
+                <li class="nav-item"><em class="text-muted">
+                    <a class="nav-link cool-link" href="#service"
+                    data-link>inicio</a></em>
+                </li>
+                <!--&#xf304;&nbsp;-->
+                <li class="nav-item"><em class="text-muted">
+                    <a class="nav-link cool-link" href="#contact"
+                    data-link>contacto</a></em>
+                </li>
+                <!--&#xf2c2;&nbsp;-->
+                <li class="nav-item"><em class="text-muted">
+                    <a class="nav-link cool-link" href="#us"
+                    id="asidebtn"
+                    data-link>nosotros</a></em>
+                </li>
+            </ul>
+        </nav>
+        <nav class="sub-header">
+            <h1>Ok, computer!</h1>
+        </nav>
+    </header>
+    <main>
+        <div class="main">
+            <section id="service">
+                <h1>servicio</h1>
+                
+                <h2>This is a heading</h2>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+                <button>Click me to hide paragraphs</button>
+            </section>
+            <section id="contact">contacto</section>
+            <section id="us">nosotros</section>
+        </div>
+    </main>
+ 
+   
+    <script type="module" src="index.js"></script>
+</body>
+</html>
