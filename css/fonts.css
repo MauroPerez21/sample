@@ -1,0 +1,108 @@
+:root{
+    --normal:1rem;
+    --large:1.5rem;
+    --larger:2rem;
+    --extra-large:3rem;
+    --big:18.75rem;
+    --word-space:1ch;
+    --indent-1:1em;
+    --indent-1-half:1.5em;
+    --indent-2:2em;
+    --indent-2-half:2.5em;
+    --indent-3:3em;
+    --indent-3-half:3.5em;
+}
+
+:root{
+    --section-gap: 160px;
+    --section-gap-small:4px;
+    --spacing:3px;
+}
+:root{
+    --ms-text:var(--vt-c-white-soft);
+    --ms-background:var(--vt-c-black-soft);
+    --ms-bg-mid:var(--vt-c-text-light-2);
+    --ms-bg-shadow:var(--vt-c-divider-light-1);
+    --ms-bg-light:var(--vt-c-text-dark-2);
+    --ms-red-shadow:var(--red-darken-4-75);
+    --ms-pink-shadow:var(--pink-darken-1-80);
+}
+
+  
+  a{
+    font-size: 16px;
+    text-decoration: none;
+    color:var(--ms-text);
+  }
+  .ms-text-stroke{
+    -webkit-text-stroke-width: 1.25px;
+    -webkit-text-stroke-color: var(--deep-purple-accent-3);
+  }
+  .ms-bolder{
+    text-transform: uppercase;
+    font-weight:900;
+  }
+  .ms-transform{
+    padding-top:1em;
+    font-size:24;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    padding-bottom: 1em;
+  }
+.text-container{
+    font-size:var(--normal);
+    font-weight: 700;
+    letter-spacing:0.125em ;
+    word-spacing: var(--word-space);
+    color:var(--ms-text);
+}
+.text-container h1{
+    text-transform: capitalize;
+    text-align:center;
+    font-weight: 900;
+    font-size: var(--extra-large);
+    letter-spacing: 0.25em;
+}
+.text-container h2{
+    text-transform: uppercase;
+    font-style:oblique;
+    font-weight: 900;
+    font-size: var(--larger);
+}
+.text-container p{
+    padding-top: var(--indent-1);
+    padding-left: var(--indent-1);
+}
+.text-container ul{
+    padding-top: var(--indent-1);
+    list-style-type: square;
+}
+.text-container h3{
+    padding-top: var(--indent-1);
+    font-size: var(--large);
+    font-weight: 800;
+    text-indent: var(--indent-1-half);
+}
+.text-container h3:first-letter{
+    text-transform: capitalize;  
+}
+.text-container article p{
+    text-indent:var(--indent-2);
+}
+.text-container h4{
+    padding-top: var(--indent-1);
+    font-size: var(--large);
+    font-weight: 700;
+    text-indent: var(--indent-2-half);
+}
+.text-container cite{
+    float:right;
+}
+.text-container details{
+    padding-left: var(--indent-3-half);
+}
+.text-container blockquote{
+  
+    padding-left:var(--indent-3);
+    font-style: oblique;
+}

@@ -47,6 +47,7 @@
         </style>
 </head>
 <body>
+    
     <div class="parallax"></div>
     <header class="fixed-top">
         <nav class="nav-container">
@@ -92,15 +93,13 @@
         </nav>
         <nav class="sub-header">
             <h1 class="cutout-text">Ok, computer!</h1>
+            <button id="toggle1" class="parallax-btn">window</button>
         </nav>
     </header>
     <main>
         <div class="main">
             <section id="service">
-                
-                <h1 class="ms-text-stroke">servicio</h1>
-                <button id="toggle1">window</button>
-                <div class="modal-mask">
+                <dialog class="modal-mask hidden">  
                     <main class="modal-contents">
                         <h2>Try to toggle a class with Jquery</h2>
                         <a href="https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_dom_toggleclass" class="href">
@@ -117,18 +116,64 @@
                           </div>
                        <button id="toggle2">close</button>
                     </main>
+                </dialog>
+                <div class="text-container">
+                    <h1 class="ms-text-stroke">servicio</h1>
+                    <a href="https://www.youtube.com/watch?v=RLc8NB2JyxE&t" class="href">intersection observer</a>
+                    <h1>title</h1>
+                    <h2>sub-title</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet <span style="color:blue;font-weight:bold;">consectetur</span> adipisicing elit. Quos culpa iste voluptatum!
+                    </p>
+                    <ul>
+                        <li>item1</li>
+                        <li>item2</li>
+                        <li>item3</li>
+                    </ul>
+                    <h3>h3-article</h3>
+                    <article>
+                       <p>
+                        Lorem ipsum dolor sit amet consectetur.
+                       </p> 
+                       <p>
+                       <dfn>HTML</dfn> is defined as a label language
+                       </p>
+                    </article>
+                    <span>
+                        <a href="">
+                        </a><a href="">
+                        </a><a href=""></a>
+                    </span>
                 </div>
-                <a href="https://www.youtube.com/watch?v=RLc8NB2JyxE&t" class="href">intersection observer</a>
-             
-                  
-
             </section>
-            <section id="contact">contacto
-                <h2>Parallax Effect</h2>
-                <a href="https://www.w3schools.com/howto/howto_css_parallax.asp" class="href">
-                    view
-                </a>
-                <a href="https://www.w3schools.com/howto/tryhow_css_parallax_demo.htm" class="href"></a>
+            <section id="contact">
+                <div class="text-container">
+                    <h2>Parallax Effect</h2>
+                    <a href="https://www.w3schools.com/howto/howto_css_parallax.asp" class="href">
+                        view
+                    </a>
+                    <a href="https://www.w3schools.com/howto/tryhow_css_parallax_demo.htm" class="href"></a>
+                    <h4>h4-remarks</h4>
+                       <details>
+                        <summary>Epcot Center</summary>
+                        <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+                      </details> 
+                    <pre>
+                        My Bonnie lies over the ocean.
+                        My Bonnie lies over the sea.
+                        My Bonnie lies over the ocean
+                        Oh, bring back my Bonnie to me.
+                        Bad bunny is death
+                      </pre>
+                      <cite>
+                        Anton, Howard
+                      </cite>
+                    <hr>
+                    <h2>maths</h2>
+                    <p>exponents are represented by sup tag, example x <sup>2</sup> </p>
+                    <p>sub-indices are represented by sub tag example CO<sub>2</sub> </p>
+                </div>
+               
             </section>
             <div class="parallax"></div>
             <section id="us"><h2>nosotros</h2>
@@ -137,11 +182,7 @@
                 </a>
             </section>
             <section> 
-               
-                
-                
 
-                
                 <input type="checkbox" id="checkbox" style="display:none"/>
                 <label for="checkbox" class="menu-toggler">
                     <i class="mdi mdi-menu-down"></i>
@@ -169,9 +210,35 @@
                     <button type="submit">Search</button>
                     </form>
                 </search>
+                <div class="text-container">
+                   <p>
+                        <s>the departed</s> was not found!
+                    </p>  
+                   <h3>free movie</h3>
+                   <article>
+                    <p>loving a girl quebec</p> 
+                   </article>
+                    <a href="https://www.w3schools.com/tags/tag_picture.asp">picture explanation</a>
+                    <picture>
+                        <!--
+                         <source media="(min-width:650px)" srcset="assets/img_pink_flowers.jpg">
+                        <source media="(min-width:465px)" srcset="assets/img_white_flower.jpg">   
+                        -->
+                        
+                        <img src="assets/img_parallax.jpg" alt="Flowers" style="width:20%;">
+                    </picture>
+                </div>
+                <div class="text-container">
+                    <h3>The blockquote element</h3>
+                    <article>
+                        <p>Here is a quote from WWF's website:</p>
 
+                        <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                        For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+                        </blockquote>
+                  </article>  
+                </div>
             </section>
-           
         </div>
     </main>
 </body>

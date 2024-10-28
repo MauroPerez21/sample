@@ -5,6 +5,7 @@
 @import url('modal.css');
 @import url('dots.css');
 @import url('images.css');
+@import url('fonts.css');
 
 .hidden{display:none;}
  body, html {

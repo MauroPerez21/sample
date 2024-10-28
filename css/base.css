@@ -77,40 +77,7 @@
       --color-text: var(--vt-c-text-dark-2);    
     }
   
-  :root{
-      --ms-text:var(--vt-c-white-soft);
-      --ms-background:var(--vt-c-black-soft);
-      --ms-bg-mid:var(--vt-c-text-light-2);
-      --ms-bg-shadow:var(--vt-c-divider-light-1);
-      --ms-bg-light:var(--vt-c-text-dark-2);
-      --ms-red-shadow:var(--red-darken-4-75);
-      --ms-pink-shadow:var(--pink-darken-1-80);
-  }
-  :root{
-    --section-gap: 160px;
-    --section-gap-small:4px;
-    --spacing:3px;
-  }
-  a{
-    font-size: 16px;
-    text-decoration: none;
-    color:var(--ms-text);
-  }
-  .ms-text-stroke{
-    -webkit-text-stroke-width: 1.25px;
-    -webkit-text-stroke-color: var(--deep-purple-accent-3);
-  }
-  .ms-bolder{
-    text-transform: uppercase;
-    font-weight:900;
-  }
-  .ms-transform{
-    padding-top:1em;
-    font-size:24;
-    text-transform: uppercase;
-    letter-spacing: 0.25em;
-    padding-bottom: 1em;
-  }
+
   *,
   *::before,
   *::after {
