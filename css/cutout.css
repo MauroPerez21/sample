@@ -1,0 +1,11 @@
+.cutout-text{
+    background-color: var(--ms-background);
+    color: var(--ms-text);
+    margin: 0 auto; /* Center the text container */
+    width: 100%;
+    mix-blend-mode: screen; /* This makes the cutout text possible */
+}
+
+h1 {
+    font-size: 48px;
+  }

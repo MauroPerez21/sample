@@ -5,28 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/default.css">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+
     <title>tecnitec</title>
+     <!--
     <script src="https://unpkg.com/vue@3"></script>
-    <!--
+   
       <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>  
     -->
+    <script type="module" src="index.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+        <style>
+            .main{
+            /*    
+            width:100vw;
+            max-width: 90%;*/
+            width:min(100vw,95%);
+            margin:auto;
+            border-left:1px solid var(--ms-text);
+            border-right:1px solid var(--ms-text);
+            margin-top: 78px;
+            }
+            .main section{
+            height:100vh;border-top:0.25px dotted lime;   
+            padding-top: 72px; 
+            }
+            .check-container{
+                display:none;
+            }
+            #checkbox:checked~.check-container{
+                display:block;
+            }
+            .menu-toggler i{
+                font-size: 24px;
+                border:2px solid var(--ms-bg-mid);
+                border-radius: 6px;
+            }
 
-
+        </style>
 </head>
 <body>
-
+    <div class="parallax"></div>
     <header class="fixed-top">
         <nav class="nav-container">
            <div class="brand">
                 <a class="navbar-brand" href="#">
-                    <em class="text-muted">
-                    <i class="bi bi-brush"></i>
-                    www.tecnitec.com.co</em>
+                        <span class="mdi mdi-wrench mdi-rotate-90"id="target">tecnitec </span>
                 </a>
-                
                     <button 
                     class="navbar-toggler fixed-top" 
                     type="button" 
@@ -45,43 +72,107 @@
                     </button>
             </div>
             <ul class="ul-collapse">
-                <li class="nav-item"><em class="text-muted">
-                    <a class="nav-link cool-link" href="#service"
-                    data-link>inicio</a></em>
+                <li class="nav-item">
+                    <a class="mdi mdi-rocket" href="#service"
+                    data-link>inicio</a>
                 </li>
                 <!--&#xf304;&nbsp;-->
-                <li class="nav-item"><em class="text-muted">
-                    <a class="nav-link cool-link" href="#contact"
-                    data-link>contacto</a></em>
+                <li class="nav-item">
+                    <a class="mdi mdi-whatsapp" href="#contact"
+                    data-link>contacto</a>
                 </li>
                 <!--&#xf2c2;&nbsp;-->
-                <li class="nav-item"><em class="text-muted">
-                    <a class="nav-link cool-link" href="#us"
+                <li class="nav-item">
+                    <a class="mdi mdi-flag" href="#us"
                     id="asidebtn"
-                    data-link>nosotros</a></em>
+                    data-link>nosotros</a>
                 </li>
+           
             </ul>
         </nav>
         <nav class="sub-header">
-            <h1>Ok, computer!</h1>
+            <h1 class="cutout-text">Ok, computer!</h1>
         </nav>
     </header>
     <main>
         <div class="main">
             <section id="service">
-                <h1>servicio</h1>
                 
-                <h2>This is a heading</h2>
-                <p>This is a paragraph.</p>
-                <p>This is another paragraph.</p>
-                <button>Click me to hide paragraphs</button>
+                <h1 class="ms-text-stroke">servicio</h1>
+                <button id="toggle1">window</button>
+                <div class="modal-mask">
+                    <main class="modal-contents">
+                        <h2>Try to toggle a class with Jquery</h2>
+                        <a href="https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_dom_toggleclass" class="href">
+                            toggle
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=BXArjoEmVa0" class="href">responsive navigation</a>
+                        
+                        <div id="clickme">
+                            <span class="mdi mdi-loading mdi-spin"></span>
+                            Click here
+                          </div>
+                          <div class="img-container">
+                            <img id="book" src="assets/img_parallax.jpg">
+                          </div>
+                       <button id="toggle2">close</button>
+                    </main>
+                </div>
+                <a href="https://www.youtube.com/watch?v=RLc8NB2JyxE&t" class="href">intersection observer</a>
+             
+                  
+
             </section>
-            <section id="contact">contacto</section>
-            <section id="us">nosotros</section>
+            <section id="contact">contacto
+                <h2>Parallax Effect</h2>
+                <a href="https://www.w3schools.com/howto/howto_css_parallax.asp" class="href">
+                    view
+                </a>
+                <a href="https://www.w3schools.com/howto/tryhow_css_parallax_demo.htm" class="href"></a>
+            </section>
+            <div class="parallax"></div>
+            <section id="us"><h2>nosotros</h2>
+                <a href="https://courses.collegespike.com/content/c-how-to-generate-auto-increment-table-row-and-cloumn-using-php-jquery-and-javascript" class="href">
+                    table autoincrements
+                </a>
+            </section>
+            <section> 
+               
+                
+                
+
+                
+                <input type="checkbox" id="checkbox" style="display:none"/>
+                <label for="checkbox" class="menu-toggler">
+                    <i class="mdi mdi-menu-down"></i>
+                </label>
+
+                <div class="check-container">
+                    <ul style="list-style-type:none">
+                        <hr>aside menu toggler</hr>
+                        <li>
+                            <span class="dot" style="background-color:teal"></span>
+                        </li>
+                        <li>
+                            <span class="dot" style="background-color:blue"></span>
+                        </li>
+                        <li>
+                            <span class="dot" style="background-color:orange"></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <search>
+                    <form action="./search/">
+                    <label for="movie">Find a Movie</label>
+                    <input type="search" id="movie" name="q" />
+                    <button type="submit">Search</button>
+                    </form>
+                </search>
+
+            </section>
+           
         </div>
     </main>
- 
-   
-    <script type="module" src="index.js"></script>
 </body>
 </html>

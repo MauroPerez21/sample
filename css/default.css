@@ -1,5 +1,31 @@
 
 @import url('normalize.css');
 @import url('base.css');
-@import url('containers.css');
- .hidden{display:none;}
+@import url('nav-container.css');
+@import url('modal.css');
+@import url('dots.css');
+@import url('images.css');
+
+.hidden{display:none;}
+ body, html {
+    scroll-behavior: smooth;
+    height: 100%;
+    
+  }
+  .parallax {
+    /* The image used */
+    background-image: url("/assets/img_parallax.jpg");
+    /* Set a specific height */
+    min-height: 400px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
