@@ -7,9 +7,13 @@
 .img-container{
     border:1px dashed var(--indigo-accent-3);
     text-align: center;
-    width:250px;
     margin:auto;
-    background-color: var(--indigo-accent-3);
    
-  
+}
+.picture{
+    border:1px solid transparent;
+    width:100%;
+    margin:0 auto;
+    text-align: center;
+    
 }

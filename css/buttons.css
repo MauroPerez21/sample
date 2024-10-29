@@ -1,0 +1,19 @@
+.app-btn{
+    border:none;
+    padding:0 2em;
+    line-height: 2em;
+    background-color: var(--red-darken-1);
+    text-transform: uppercase;
+    letter-spacing: 0.25;
+    border-radius: var(--radius);
+    color:var(--ms-text);
+    font-weight: 800;
+    cursor:pointer;
+}
+.select-btn{
+    width:144px;
+    text-align: center;
+    background-color: var(--red-darken-1);
+    color:var(--ms-text);
+    padding: 0.5 1em;
+}

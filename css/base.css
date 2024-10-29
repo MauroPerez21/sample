@@ -55,8 +55,8 @@
     --color-background-soft: var(--vt-c-white-soft);
     --color-background-mute: var(--vt-c-white-mute);
   
-    --color-border: var(--vt-c-divider-light-2);
-    --color-border-hover: var(--vt-c-divider-light-1);
+    --border: var(--vt-c-text-dark-2);
+    --border-hover: var(--vt-c-divider-light-1);
   
     --color-heading: var(--vt-c-text-light-1);
     --color-text: var(--vt-c-text-light-1);
@@ -88,8 +88,6 @@
   
   body{
     min-height: 100vh;
-    color: var(--ms-text);
-    background: var(--ms-background);
     transition:
       color 0.5s,
       background-color 0.5s;
@@ -111,5 +109,9 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+  body:has(option[value="light"]:checked){
+    background-color:var(--ms-background);
+    color:var(--ms-text);
   }
   
