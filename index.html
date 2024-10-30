@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/default.css">
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
-    
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
     <title>tecnitec</title>
      <!--
@@ -16,17 +16,22 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>  
     -->
-    <script type="module" src="index.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script type="module" defer src="index.js"></script>
+        
         <style>
+            body:has(option[value="light"]:checked){
+            background-color:var(--ms-background);
+            color:var(--ms-text);
+            }
+            main>body{
+                background: var(--ms-text);
+            }
             .main{
-            /*    
-            width:100vw;
-            max-width: 90%;*/
             width:min(100vw,95%);
             margin:auto;
-            border-left:1px solid var(--ms-text);
-            border-right:1px solid var(--ms-text);
+            border-left:1px solid var(--ms-bg-mid);
+            border-right:1px solid var(--ms-bg-mid);
             margin-top: 78px;
             }
             .main section{
@@ -49,23 +54,20 @@
 </head>
 <body>
     
-    <div class="parallax"></div>
+  
     <header class="fixed-top">
         <nav class="nav-container">
            <div class="brand">
-                <a class="navbar-brand" href="#">
-                        <span class="mdi mdi-wrench mdi-rotate-90"id="target">
-                            tecnitec 
-                        </span>
-                </a>
+            <img src="assets/logo48.png" alt="mantenimiento y reparación de lavadoras, neveras" width="36">
+         
                     <button 
-                    class="navbar-toggler fixed-top" 
-                    type="button" 
-                    data-bs-toggle="collapse"
-                    data-bs-target="#gitnav"
-                    aria-controls="gitnav"
-                    aria-label="Toggle navigation"
-                    id="toggler"
+                        class="" 
+                        type="button" 
+                        data-bs-toggle="collapse"
+                        data-bs-target="#gitnav"
+                        aria-controls="gitnav"
+                        aria-label="Toggle navigation"
+                        id="toggler"
                     >
                     <input type="checkbox" id="nav" class="hidden">
                     <label for="nav" class="nav-btn">
@@ -94,20 +96,28 @@
            
             </ul>
         </nav>
-        <nav class="sub-header">
-            <h3 class="-ms-text-stroke">tecnitec</h1>
-            <select class="select-btn">
-                <option value="dark">light</option>
-                <option value="light">dark</option>
-            </select>
+        <nav class="sub-header-top">
+            <div class="sub-header">
+                <h2 class="dark-shadow dark-stroke ms-bolder">
+                    <span class="mdi mdi-wrench mdi-rotate-90"id="target">
+                    </span>
+                    centro de servicios</h2>
+                <div class="custom-select">
+                    <select class="select-btn">
+                    <option value="dark" >normal</option>
+                    <option value="light">ahorro energ&iacute;a</option> 
+                </div>
+                
+                </select>
+            </div>
         </nav>
     </header>
     <main>
         <div class="main">
         <section id="service"> 
-            <div class="text-container two-halves">
+            <div class="text-container two-halves" style="background-color:var(--ms-bg-dark)">
                     <img src="assets/logos/tecnitec-logo.png" alt="linea_blanca" width="250">
-                    <h1 class="h-iris">servicio t&eacute;cnico</h1>
+                    <h1 class="rainbow">servicio t&eacute;cnico</h1>
             </div>
             <article>
                 <h3 class="h3-scope">lineas de atenci&oacute;n</h3>
@@ -139,31 +149,62 @@
                 <div class="text-container">
                    <h1 class="inset-shadow">domicilios &aacute;rea metropolitana</h1>  
                    <h3 class="h3-scope">+ garant&iacute;a de 12 meses!</h3>
+                   <h3 class="h3-scope">descarga el c&oacute;digo QR y obt&eacute;n un 15% de descuento en tu servicio!</h3>
+                   
                     <article class="two-halves">
-                        <div class="align-right">
+                        <div class="align-rigth-center">
                             <i class="mdi mdi-truck" style="font-size:96px"></i>
                          <h2>
                             el operador
                         </h2>   
                         <p>atender&aacute; tu solicitud</p>
-                        <button class="app-btn">
-                            info
-                        </button>
+                      
+                        </div>
+                        <div class="qr-generator">
+                        <div id="qr-container">
+
+                        </div>
+                            <button class="app-btn">
+                                <i class="mdi mdi-arrow-down"></i>
+                                descargar
+                            </button>
                         </div>
                         <div>
                             <img src="assets/pngaaa.com-881995.png" alt="linea de atención">
                         </div>
-                        
+                        <style>
+                            @media(max-width:768px){
+                               .align-right-center{
+                                text-align: center;
+                            } 
+                                
+                            }
+                            @media(min-width:768px){
+                               .align-rigth-center{
+                                text-align: right;
+                            } 
+                                
+                            }
+                            
+                            .qr-generator{
+                                display:flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-items: center;
+                                text-align: center;
+                              
+                            }
+                            #qr-container{
+                                margin:2em 0;
+                                border:4px solid var(--ms-text);
+                            
+                            }
+                        </style>
                     </article>
-                    <h3 class="h3-scope">descarga el c&oacute;digo QR y obt&eacute;n un 15% de descuento en tu servicio!</h3>
-                    <style>
-                        .align-right{
-                            text-align: right;
-                        }
-                    </style>
+                  
                 </div>
                 <h3 class="h3-scope">atendemos todas las marcas</h3>
-                <article class="two-halves">
+                <article class="two-halves"  style="background-color:var(--ms-bg-dark)">
                     <dl class="dl">
                         <dt>neveras</dt>
                             <dd>samsung</dd>
@@ -174,35 +215,35 @@
                             <dd>whirlpool</dd>
                             <dd>y muchas mas...</dd>
                     </dl>
-                    <div class="grid-logos-container">
+                    <div class="grid-logos-container" >
                         <i class="stamps">
-                            <img src="assets/logos/GE-logo.png" alt="" width="50">
+                            <img src="assets/logos/centrales.svg" alt="" width="100">
                         </i>
                         <i class="stamps">
-                            <img src="assets/logos/GE-logo.png" alt="" width="50">
+                            <img src="assets/logos/GE-logo.png" alt="" width="100">
                         </i>
                         <i class="stamps">
-                            <img src="assets/logos/GE-logo.png" alt="" width="50">
+                            <img src="assets/logos/lg-logo.png" alt="" width="100">
                         </i>
                         <i class="stamps">
-                            <img src="assets/logos/GE-logo.png" alt="" width="50">
+                            <img src="assets/logos/mabe.svg" alt="" width="100">
                         </i>
                         <i class="stamps">
-                            <img src="assets/logos/GE-logo.png" alt="" width="50">
+                            <img src="assets/logos/Samsung-Logo.png" alt="" width="100">
                         </i>
                         <i class="stamps">
-                            <img src="assets/logos/GE-logo.png" alt="" width="50">
+                            <img src="assets/logos/whirlpool.svg" alt="" width="100">
                         </i>
                            
                     </div>
                     <div class="picture">
+                        servicio 
                         <img src="assets/logo192.png" alt="servicio de reparacion electrodomesticos" width="150">
+                        t&eacute;cnico
                     </div>
                 </article>
             </footer>
         </section>
-        
-        <div class="parallax"></div>
         <section id="contact">
             <article class="text-container">
          
@@ -220,14 +261,18 @@
                </header>
                <h1><strong class="green">&#10004;</strong>  garant&iacute;a de <em class="em-circle">12</em> meses</h1>
                <h2>en todos tus electrodom&eacute;sticos de linea blanca</h2>
-                <article class="two-halves invert-color">
+                <article class="two-halves invert-color parallax">
                     <img src="assets/nevecon.png" alt="nevecones">
                     <img src="assets/lavadora.png" alt="nevecones">
                     <img src="assets/nevera.png" alt="nevecones">
                 </article>
-               <h3 style="text-align:center">preguntas frecuentes</h3> 
+               <h3 style="text-align:right">preguntas frecuentes</h3> 
             </article>
             <style>
+                .invert-color{
+                    border-top:2em solid var(--ms-bg-mid);
+                    border-bottom:2em solid var(--ms-bg-mid);
+                }
                 .invert-color{
                     background-color:var(--ms-text);
                 }
@@ -282,52 +327,96 @@
             </article>
             </main>
             <footer class="footer-container">
-                    <h1 class="h-iris">
+                    <h1>
                     servicios
                     </h1>
                 <summary class="two-halves">
                     <article class="card">
-                        <h3>reparaci&oacute;n</h3>
-                        <i class="mdi mdi-wrench md-48"></i>
+                        <header>
+                         <h3>reparaci&oacute;n</h3>
+                        <i class="mdi mdi-wrench"></i>   
+                        </header>
+                        
+                        <img src="assets/pt0.png" alt="" width="200">
+                        <footer>
                         <p>
                           Ofrecemos <em>Servicio T&eacute;cnico</em> especializado para tus electrodom&eacute;sticos, todos nuestros trabajos cuentan con garant&iacute;a.  
-                        </p>
-                        
+                        </p> 
+                        </footer>
                     </article>
                     <article class="card">
+                        <header>
                         <h3>mantenimiento</h3>
-                        <i class="mdi mdi-settings"></i>
+                        <i class="mdi mdi-puzzle"></i>  
+                        </header>
+                       
+                        <img src="assets/pt1.png" alt="" width="200">
+                        <footer>
                         <p>
-                            Realizamos <em>Mantenimiento</em>  preventivo y adecuado, para que tus electrodom&eacute;sticos sigan funcionando adecuadamente. 
-                        </p>
+                        Realizamos <em>Mantenimiento</em>  preventivo y adecuado, para que tus electrodom&eacute;sticos sigan funcionando adecuadamente. 
+                        </p> 
+                        </footer>
+                       
                     </article>
                     <article class="card">
-                        <h3 >instalaci&oacute;n</h3>
-                        <i class="mdi mdi-power-plug"></i>
-                        <p>
+                        <header>
+                         <h3 >instalaci&oacute;n</h3>
+                        <i class="mdi mdi-power-plug"></i>   
+                        </header>
+                        
+                        <img src="assets/pt2.png" alt="" width="200">
+                        <footer>
+                         <p>
                             Realizamos la <em>Instalaci&oacute;n</em> responsable de tus electrodomésticos, para que funcionen correctamente y sean duraderos.
  
-                        </p>
+                        </p>   
+                        </footer>
+                        
                     </article>
                 </summary>
                 <style>
                     .card{ 
+                        border:0.25px solid var(--ms-bg-mid);
+                        border-radius: 2rem;
                         display:flex;
                         flex-wrap: wrap;
                         align-items: center;
                         justify-content: center;
-                        height:25rem;
+                        height:40rem;
                         text-align: center;
-                       
+                        overflow:hidden;
+                        margin:1em 0;
+                        
                     }
+                    .card header{
+                        border-bottom:0.25px solid var(--ms-bg-mid);
+                        width:100%;
+                        padding:1em;
+                        display:inline-flex;
+                        background-color: var(--ms-background);
+                        border-top-right-radius: 2rem;
+                        border-top-left-radius:2rem;
+                    }
+                    .card footer{
+                        border-top:0.25px solid var(--ms-bg-mid);
+                        border-bottom-left-radius:2rem;
+                        width:100%;
+                        padding:1em 0 6em;
+                        color:var(--ms-text);
+                        background-color: var(--ms-background);
+                        border-bottom-right-radius: 2rem;
+                        
+                    }
+                    
                     .card h3{
                         color:var(--amber-darken-4);
                     }
                     .card i{
                         border:2px solid var(--amber-darken-4);
                         margin:auto;
-                        padding:2rem;
-                        font-size: 1.5rem;
+
+                        padding:0.5rem;
+                        font-size: 3rem;
                         color:var(--amber-darken-4);
                         border-radius: 50%;
                     }
@@ -338,25 +427,31 @@
             </footer>
         </section>
     </main>
-    <footer>
+    <div class="parallax"></div>
+    <footer style="background-color:var(--ms-background);padding-top:2em; text-align: center;color:var(--ms-text)">
+        <img src="assets/logos/tecnitec-logo.png" alt="servicio domiciliario medellin area metropolitana">
+             
         <article class="two-halves">
             <div class="foot-print">
                 <h3>tecnitec</h3> 
                 <div class="networks">
                     <img src="assets/logo48.png" alt=""> 
                 </div>
-               
                 <p>t&eacute;cnicos especializados en reparaci&oacute;n y mantenimiento de tus electrodom&eacute;sticos.</p>
+                <span style="color:var(--red-darken-1);font-size:48px" class="mdi mdi-map-marker-outline"></span>
+                <p>Medell&iacute;n - &Aacute;rea Metropolitana</p>
             </div>
             <div class="foot-print">
                 <h3>domicilios</h3>
                 <h4>lineas de atenci&oacute;n</h4>
-                <i class="mdi mdi-cellphone"></i>
+                <i class="mdi mdi-cellphone-iphone" style="font-size:48px;color:var(--amber-lighten-1)"></i>
                 <menu style="list-style-type:none">
                     <li>
+                        <i class="mdi mdi-whatsapp"></i>
                         301 245 2679
                     </li>
                     <li>
+                        <i class="mdi mdi-phone"></i>
                         604 322 9262
                     </li>
                 </menu>
@@ -372,7 +467,6 @@
                     tecnitec10@gmail.com
                 </div>
             </div>
-
         </article>
     <style>
         .foot-print{
@@ -389,12 +483,18 @@
             font-weight: 800;
             text-transform: uppercase;
         }
+        @media(max-width:768px){
+            .foot-print{
+                margin:auto;
+            }
+        }
     </style>
+    <p style="padding:2em 0">Derechos - Reservados &#169; |&nbsp;TECNITEC ~ 2024&nbsp;|</p>
     </footer>
 
     <dialog class="modal-mask hidden">  
         <main class="modal-contents">
-            <h2>envia un mensaje</h2>
+            <h2>env&iacute;a un mensaje</h2>
             <p>haz click en el <em>&iacute;cono de wpp</em> </p>
             <a href="" style="font-size:4em;color:var(--light-green-accent-3)">
                 <i class="mdi mdi-whatsapp"

@@ -27,8 +27,9 @@
 }
 .brand{
     float:left;  border-right:1px solid lime;
-    
-    padding:0 96px;
+    padding:0 48px;
+ 
+    padding-top: 0.25em;
 }
 .brand, .ul-collapse{
     font-size:24px;
@@ -47,24 +48,23 @@
     line-height: 48px;
 }
  
-.sub-header{
-    border-top:2px solid var(--ms-bg-mid);
+.sub-header-top{
+    border-top:2px solid var(--ms-bg-mid); border-bottom:0.5px dashed red;
     margin-top:46px;
     text-align: center;
     height:52px; 
+   line-height: 48px;
 }
-.sub-header h1{
-    border-bottom:0.2px solid yellow;
-    line-height:48px;
-    font-style:oblique;
-    letter-spacing: 0.25em;
-    font-weight: 900;
-    text-transform: Capitalize;
-    padding-top: 0.125em;
+.sub-header{
+    max-width:min(80rem, 90%);
+    margin:auto;
 }
-.ul-collapse{
-  
+.sub-header h2{
+   float:left;
 }
+
+
+
 .ul-collapse li{
     display:flex;
     width:144px;
@@ -82,5 +82,10 @@
 }
 .active{
     border-bottom:2px solid var(--ms-text);
+}
+@media(max-width:768px){
+    .ul-collapse{
+        display:none;
+    }
 }
 

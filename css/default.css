@@ -3,27 +3,25 @@
 @import url('base.css');
 @import url('nav-container.css');
 @import url('modal.css');
-@import url('dots.css');
+
 @import url('images.css');
 @import url('fonts.css');
 @import url('buttons.css');
 @import url('grid.css');
-.hidden{display:none;}
+
  body, html {
     scroll-behavior: smooth;
     height: 100%;
     
   }
   .parallax {
-    /* The image
-    background-image: url("/assets/service.png");
-
-    min-height: 400px;
-    Create the parallax scrolling effect */
+    background-image: url("/assets/pngaaa.com-5161576.png");
+    min-height: 50vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    filter:grayscale(100%);
   }
 /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
 @media only screen and (max-device-width: 1366px) {
@@ -40,4 +38,11 @@
   align-items: center;
   gap:4em;
   overflow: hidden;
+}
+.hidden{display:none;}
+@media(max-width:768px){
+  .two-halves{
+    display:block;
+    text-align: center;
+  }
 }

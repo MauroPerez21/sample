@@ -17,12 +17,13 @@
     --section-gap: 160px;
     --section-gap-small:4px;
     --spacing:3px;
+    --word-space:normal;
 }
 :root{
     --ms-text:var(--vt-c-white-soft);
     --ms-background:var(--vt-c-black-soft);
     --ms-bg-mid:var(--vt-c-text-light-2);
-    --ms-bg-shadow:var(--vt-c-divider-light-1);
+    --ms-bg-dark:var(--vt-c-divider-light-0);
     --ms-bg-light:var(--vt-c-text-dark-2);
     --ms-red-shadow:var(--red-darken-4-75);
     --ms-pink-shadow:var(--pink-darken-1-80);
@@ -51,8 +52,9 @@
     font-weight: 700;
     letter-spacing:0.125em ;
     word-spacing: var(--word-space);
-  
+    margin:2em 0;
 }
+
 .text-container h1{
     text-transform: capitalize;
     text-align:center;
@@ -121,14 +123,14 @@
     font-style: italic;
 }
 
-.h-iris{
-    
+.rainbow{
     background: linear-gradient(to right, var(--red-darken-1), var(--amber-lighten-1));
     -webkit-background-clip: text;
     color:transparent; 
 }
+
 .dark-stroke{
-    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--ms-text);
     color:transparent;
        

@@ -8,7 +8,7 @@
     --vt-c-black-mute: #282828;
   
     --vt-c-indigo: #2c3e50;
-  
+    --vt-c-divider-light-0: rgba(60, 60, 60, 0.85);
     --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
     --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
     --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
@@ -110,8 +110,5 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  body:has(option[value="light"]:checked){
-    background-color:var(--ms-background);
-    color:var(--ms-text);
-  }
+
   
