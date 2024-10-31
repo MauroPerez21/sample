@@ -4,19 +4,21 @@
     --larger:2rem;
     --extra-large:3rem;
     --big:18.75rem;
-    --word-space:1ch;
+    
     --indent-1:1em;
     --indent-1-half:1.5em;
     --indent-2:2em;
     --indent-2-half:2.5em;
     --indent-3:3em;
     --indent-3-half:3.5em;
+    --quarter:0.25em;
+    --eigth:0.125em;
 }
 
 :root{
-    --section-gap: 160px;
-    --section-gap-small:4px;
-    --spacing:3px;
+    --section-gap: 10ch;
+    --section-gap-small:2ch;
+    --spacing:1ch;
     --word-space:normal;
 }
 :root{
@@ -29,28 +31,15 @@
     --ms-pink-shadow:var(--pink-darken-1-80);
 }
 
-  
-  a{
-    font-size: 16px;
-    text-decoration: none;
-    color:var(--ms-text);
-  }
-  
-  .ms-bolder{
-    text-transform: uppercase;
-    font-weight:900;
-  }
-  .ms-transform{
-    padding-top:1em;
-    font-size:24;
-    text-transform: uppercase;
-    letter-spacing: 0.25em;
-    padding-bottom: 1em;
-  }
+.text-container{
+    text-align: justify;
+    text-justify: inter-word;
+}
+ 
 .text-container{
     font-size:var(--normal);
     font-weight: 700;
-    letter-spacing:0.125em ;
+    letter-spacing:var(--eight) ;
     word-spacing: var(--word-space);
     margin:2em 0;
 }
@@ -60,7 +49,7 @@
     text-align:center;
     font-weight: 900;
     font-size: var(--extra-large);
-    letter-spacing: 0.25em;
+    letter-spacing: var(--quarter);
 }
 .text-container h2{
     text-transform: uppercase;
@@ -70,28 +59,37 @@
 }
 .text-container p{
     padding-top: var(--indent-1);
-    padding-left: var(--indent-1);
+    font-weight: 700;
 }
 .text-container p:first-letter{
-    text-transform: uppercase;
-    font-weight: 900;
+    text-transform: uppercase; 
+}
+.text-container em{
+    font-weight: 800;
 }
 
 .text-container ul{
     padding-top: var(--indent-1);
+    margin-left: var(--indent-1-half);
     list-style-type: square;
+}
+.text-container ul li{
+    font-weight: 700;
 }
 .text-container h3{
     padding-top: var(--indent-1);
     font-size: var(--large);
     font-weight: 800;
+}
+.text-container h3{
     text-indent: var(--indent-1-half);
 }
+
 .text-container h3:first-letter{
     text-transform: capitalize;  
 }
 .text-container article p{
-    text-indent:var(--indent-2);
+    margin-left:var(--indent-2);
 }
 .text-container h4{
     padding-top: var(--indent-1);
@@ -106,13 +104,29 @@
     padding-left: var(--indent-3-half);
 }
 .text-container blockquote{
-  
     padding-left:var(--indent-3);
     font-style: oblique;
 }
+a{
+    font-size: 1rem;
+    text-decoration: none;
+    color:var(--ms-text);
+}
+
+.ms-bolder{
+    text-transform: uppercase;
+    font-weight:900;
+}
+.ms-transform{
+    padding-top:var(--indent-1);
+    font-size:var(--large);
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    padding-bottom: var(--indent-1);
+}
 .h3-scope{
-   margin-top: 1em;
-    margin-bottom: 1em;  
+    margin-top: var(--indent-1);
+    margin-bottom: var(--indent-1);  
 }
 .h3-scope, menu{
     text-align: center;

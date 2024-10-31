@@ -9,12 +9,18 @@ $(function(){
       $(".modal-mask").hide();
     });
     $(".fixed-top-right").click(function(){
-      $(".ul-collapse").toggle()
+      $(".ul-collapse").slideDown()
+      $('.fixed-top-right').hide()
+    })
+    $(".collapse-bottom").click(function(){
+      $(".ul-collapse").slideUp()
+      $('.fixed-top-right').show()
     })
 });
 window.onload = hideModal()
 function hideModal(){
-  document.getElementsByClassName("modal-mask").display='none'
+  //document.getElementsByClassName("ul-collapse").display='none'
+  console.log('hidden')
 }
 const qrContainer = document.getElementById('qr-container')
 new QRCode(qrContainer, 'www.tecnitec.com-bono-15%')

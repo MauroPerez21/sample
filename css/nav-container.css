@@ -1,4 +1,4 @@
-.fixed-top-right{
+.fixed-top-right, .collapse-bottom{
     position:fixed;
     border:none;
     top:0;
@@ -11,11 +11,12 @@
     border-radius: 0.5em;
     transition:border 0.3 ease;
 }
+
 .fixed-top-right:hover{
     border:0.01em dashed var(--ms-bg-light);
 }
 .fixed-top{
-    position:fixed;border-top:0.01em dashed orange;
+    position:fixed;border-top:0em dashed orange;
     background-color: var(--ms-background);
     top:0;
     left:0;
