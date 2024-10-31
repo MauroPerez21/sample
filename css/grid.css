@@ -38,7 +38,7 @@
 @media(min-width:768px){
 .grid-logos-container{
     
-    border-left:20px dashed var(--ms-bg-dark);border-right:20px dashed var(--ms-bg-dark);
+    border-left:4px dashed var(--ms-bg-dark);border-right:4px dashed var(--ms-bg-dark);
     display: grid;
     margin:0 auto;
     place-items:center;

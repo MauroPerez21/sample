@@ -8,7 +8,9 @@ $(function(){
     $("#toggle2").click(function(){
       $(".modal-mask").hide();
     });
- 
+    $(".fixed-top-right").click(function(){
+      $(".ul-collapse").toggle()
+    })
 });
 window.onload = hideModal()
 function hideModal(){
@@ -16,3 +18,11 @@ function hideModal(){
 }
 const qrContainer = document.getElementById('qr-container')
 new QRCode(qrContainer, 'www.tecnitec.com-bono-15%')
+
+/*
+window.addEventListener('scroll', ()=>{
+  if (document.documentElement.scrollTop > 96){
+    //console.log(document.documentElement.scrollTop)
+  } 
+})*/
+const onTop = ()=> document.body.scrollTop = 0

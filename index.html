@@ -35,82 +35,55 @@
             margin-top: 78px;
             }
             .main section{
-            border-top:0.25px dotted lime;   
+            border-top:0px dotted lime;   
             padding-top: 72px; 
             }
-            .check-container{
-                display:none;
-            }
-            #checkbox:checked~.check-container{
-                display:block;
-            }
-            .menu-toggler i{
-                font-size: 24px;
-                border:2px solid var(--ms-bg-mid);
-                border-radius: 6px;
-            }
-
+            
         </style>
 </head>
 <body>
-    
+    <button class="fixed-top-right">
+        <i class="mdi mdi-dots-vertical"></i>  
+  </button>
   
     <header class="fixed-top">
-        <nav class="nav-container">
+        <nav class="sub-header-top">
            <div class="brand">
             <img src="assets/logo48.png" alt="mantenimiento y reparación de lavadoras, neveras" width="36">
-         
-                    <button 
-                        class="" 
-                        type="button" 
-                        data-bs-toggle="collapse"
-                        data-bs-target="#gitnav"
-                        aria-controls="gitnav"
-                        aria-label="Toggle navigation"
-                        id="toggler"
-                    >
-                    <input type="checkbox" id="nav" class="hidden">
-                    <label for="nav" class="nav-btn">
-                        <i></i>
-                        <i></i>
-                        <i></i>    
-                    </label>
-                    </button>
             </div>
-            <ul class="ul-collapse">
-                <li class="nav-item">
+            <div class="ul-collapse">
+                <span class="nav-item">
                     <a class="mdi mdi-rocket" href="#service"
                     data-link>inicio</a>
-                </li>
+                </span>
                 <!--&#xf304;&nbsp;-->
-                <li class="nav-item">
+                <span class="nav-item">
                     <a class="mdi mdi-whatsapp" href="#contact"
                     data-link>contacto</a>
-                </li>
+                </span>
                 <!--&#xf2c2;&nbsp;-->
-                <li class="nav-item">
+                <span class="nav-item">
                     <a class="mdi mdi-flag" href="#us"
                     id="asidebtn"
                     data-link>nosotros</a>
-                </li>
-           
-            </ul>
-        </nav>
-        <nav class="sub-header-top">
-            <div class="sub-header">
-                <h2 class="dark-shadow dark-stroke ms-bolder">
-                    <span class="mdi mdi-wrench mdi-rotate-90"id="target">
-                    </span>
-                    centro de servicios</h2>
-                <div class="custom-select">
-                    <select class="select-btn">
-                    <option value="dark" >normal</option>
-                    <option value="light">ahorro energ&iacute;a</option> 
-                </div>
-                
-                </select>
+                </span> 
             </div>
         </nav>
+        <div class="sub-header-bottom">
+            <nav>
+                <h2 class="dark-shadow dark-stroke ms-bolder">
+                    <span class="mdi mdi-wrench mdi-rotate-90" >
+                    </span>
+                    centro de servicios
+                </h2>
+                <div class="custom-select">
+                    <select class="select-btn">
+                        <option value="dark" >modo d&iacute;a</option>
+                        <option value="light">modo noche</option> 
+                    </select>
+                </div>
+            </nav>
+        </div>
     </header>
     <main>
         <div class="main">
@@ -273,11 +246,14 @@
                     border-top:2em solid var(--ms-bg-mid);
                     border-bottom:2em solid var(--ms-bg-mid);
                 }
-                .invert-color{
-                    background-color:var(--ms-text);
-                }
+               
                 .invert-color img{
+
                     width:10rem;
+                    backdrop-filter: blur(12px);
+                   padding:0.5em;
+                    border-radius: 1em;
+                    border:0.25px solid red;
                 }
                 .networks{
                     margin:auto;
@@ -296,6 +272,9 @@
                 }
                 .green{
                     color:var(--teal-accent-3);
+                }
+                @media(max-width:760px){
+                  
                 }
              
             </style>
@@ -427,7 +406,7 @@
             </footer>
         </section>
     </main>
-    <div class="parallax"></div>
+    <div class="parallax invert"></div>
     <footer style="background-color:var(--ms-background);padding-top:2em; text-align: center;color:var(--ms-text)">
         <img src="assets/logos/tecnitec-logo.png" alt="servicio domiciliario medellin area metropolitana">
              

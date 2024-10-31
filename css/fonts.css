@@ -135,15 +135,15 @@
     color:transparent;
        
   }
-  .light-stroke{
+.light-stroke{
     -webkit-text-stroke-width: 4px;
     -webkit-text-stroke-color: var(--ms-background);
     color:transparent;
   }
-  .dark-shadow{
+.dark-shadow{
     text-shadow:2px 4px 10px var(--ms-text);
   }
-  .light-shadow{
+.light-shadow{
     text-shadow:4px 4px 10px var(--ms-background);
   }
  

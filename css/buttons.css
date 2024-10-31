@@ -1,75 +1,78 @@
 :root{
-    --size:1rem;
+  --size:1rem;
 }
 .app-btn{
-    border:none;
-    padding:0 2em;
-    line-height: 2em;
-    background-color: var(--red-darken-1);
-    text-transform: uppercase;
-    letter-spacing: 0.25;
-    border-radius: var(--radius);
-    color:var(--ms-text);
-    font-weight: 800;
-    cursor:pointer;
+  border:none;
+  padding:0 2em;
+  line-height: 2em;
+  background-color: var(--red-darken-1);
+  text-transform: uppercase;
+  letter-spacing: 0.25;
+  border-radius: var(--radius);
+  color:var(--ms-text);
+  font-weight: 800;
+  cursor:pointer;
 }
-/*
-.select-btn{
- 
-    width:144px;
-    text-align: center;
-    background-color: var(--red-darken-1);
-    color:var(--ms-text);
-    padding: 0.5 1em;
-}*/
-
 .custom-select {
-
-    display:grid;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-    height:48px;
-    width:192px;
-    float:right;
-    line-height: 48px;
+  display:grid;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+.custom-select select {
+  background-color: var(--ms-background);
+  border: none;
+  border-radius: 0.25rem;
+  color: var(--amber-lighten-1);
+  cursor: pointer;
+}
+.custom-select select {
+  appearance: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+  @media(min-width:768px){
+    .custom-select {
+      font-size:0.9rem;
+      height:3rem;
+      float:right;
+      line-height:3rem;
+      width:192px;
+    }
+    .custom-select::before,
+    .custom-select::after {
+        --size: 0.3rem;
+        content: "";
+        line-height:48px;
+        right: 1rem;
+        pointer-events: none;
+    }
     
-  }
-  
-  .custom-select select {
-    appearance: none;
-    font-size: inherit;
-    text-transform: uppercase;
-    text-align: right;
-    padding: 0.25em 1em;
-    background-color: var(--ms-background);
-    border: none;
-    border-radius: var(--radius);
-    color: var(--amber-lighten-1);
-    cursor: pointer;
+    .custom-select::before {
+        border-left: var(--size) solid transparent;
+        border-right: var(--size) solid transparent;
+        border-bottom: var(--size) solid black;
+        top: 40%;
+    }
     
+    .custom-select::after {
+        border-left: var(--size) solid transparent;
+        border-right: var(--size) solid transparent;
+        border-top: var(--size) solid black;
+        top: 55%;
+    }
   }
-  
-  .custom-select::before,
-  .custom-select::after {
-    --size: 0.3rem;
-    content: "";
-    line-height:48px;
-    right: 1rem;
-    pointer-events: none;
-  }
-  
-  .custom-select::before {
-    border-left: var(--size) solid transparent;
-    border-right: var(--size) solid transparent;
-    border-bottom: var(--size) solid black;
-    top: 40%;
-  }
-  
-  .custom-select::after {
-    border-left: var(--size) solid transparent;
-    border-right: var(--size) solid transparent;
-    border-top: var(--size) solid black;
-    top: 55%;
+  @media(max-width:768px){
+      .custom-select{
+        font-size:0.75rem;
+        height:3rem;
+       
+        float:left;
+        line-height: 3rem;
+        margin: 0 1em ;
+      }
+      .custom-select select{
+        text-align: inherit; 
+      }
   }
   
