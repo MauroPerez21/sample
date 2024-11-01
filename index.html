@@ -20,7 +20,7 @@
     <script type="module" defer src="index.js"></script>
         
         <style>
-            body:has(option[value="light"]:checked){
+            body:has(option[value="dark"]:checked){
             background-color:var(--ms-background);
             color:var(--ms-text);
             }
@@ -30,15 +30,18 @@
             .main{
             width:min(100vw,95%);
             margin:auto;
-            border-left:1px solid var(--ms-bg-mid);
-            border-right:1px solid var(--ms-bg-mid);
+            border-left:0px solid var(--ms-bg-mid);
+            border-right:0px solid var(--ms-bg-mid);
             margin-top: 78px;
             }
             .main section{
-            border-top:0px dotted lime;   
-            padding-top: 72px; 
-            }
-            
+            border-bottom:0px dotted lime;  
+            }   
+            .blank-space{
+                border:2px solid yellow;
+                height:1vh;
+                margin-top:10vh;
+            }     
         </style>
 </head>
 <body>
@@ -84,20 +87,22 @@
                     <button class="collapse-bottom">
                         <i class="mdi mdi-dots-vertical"></i>  
                   </button>
-                 
                 </div>
             </nav>
         </div>
     </header>
     <main>
+ 
         <div class="main">
-        <section id="service"> 
-            <div class="text-container two-halves" style="background-color:var(--ms-bg-dark)">
+<!--CUSTOMER_SERVICE-->
+
+        <section id="service" class="text-container"> 
+            <div class="two-halves" style="background-color:var(--ms-bg-dark)">
                     <img src="assets/logos/tecnitec-logo.png" alt="linea_blanca" width="250">
                     <h1 class="rainbow">servicio t&eacute;cnico</h1>
             </div>
             <article>
-                <h3 class="h3-scope">lineas de atenci&oacute;n</h3>
+                <h2 class="h3-scope">lineas de atenci&oacute;n</h2>
                 <div class="two-halves">
                     <div>
                     <img src="assets/service.png" alt="linea_blanca" width="250">
@@ -105,14 +110,14 @@
                     <div style="text-align:center">
                         
                         <div style="font-size: 2em;display:block">
-                            <h4>
+                            <h2>
                                 <i class="mdi mdi-phone"></i>&nbsp;<strong>604 322 9262</strong> 
-                            </h4>
+                            </h2>
                                 
                         <br>
-                        <h4>
+                        <h2>
                             <i class="mdi mdi-whatsapp"></i>&nbsp;<strong>301 245 2679 </strong>  
-                        </h4>
+                        </h2>
                                 
                             </div>
                         <button id="toggle1" class="app-btn">window</button> 
@@ -123,10 +128,10 @@
                 </div>
             </article>
             <footer>
-                <div class="text-container">
+                <div>
                    <h1 class="inset-shadow">domicilios &aacute;rea metropolitana</h1>  
-                   <h3 class="h3-scope">+ garant&iacute;a de 12 meses!</h3>
-                   <h3 class="h3-scope">descarga el c&oacute;digo QR y obt&eacute;n un 15% de descuento en tu servicio!</h3>
+                   <h2>+ garant&iacute;a de 12 meses!</h2>
+                   <h2>descarga el c&oacute;digo QR y obt&eacute;n un 15% de descuento en tu servicio!</h2>
                    
                     <article class="two-halves">
                         <div class="align-rigth-center">
@@ -137,16 +142,23 @@
                         <p>atender&aacute; tu solicitud</p>
                       
                         </div>
-                        <div class="qr-generator">
-                        <div id="qr-container">
-
-                        </div>
+                        <div class="centered-block">
+                            <form action="">
+                                <button class="app-btn-success">
+                                    generar
+                                </button>
+                                <input type="text" 
+                                id="qrText" 
+                                placeholder="escribe tu documento id.">
+                            </form><br>
+                            <div class="qr-generator">
+                                <div id="qr-container"></div>
+                            </div>
                             <button class="app-btn">
-                                <i class="mdi mdi-arrow-down"></i>
                                 descargar
                             </button>
                         </div>
-                        <div>
+
                             <img src="assets/pngaaa.com-881995.png" alt="linea de atención">
                         </div>
                         <style>
@@ -221,31 +233,86 @@
                 </article>
             </footer>
         </section>
+<!--COMPANY_CONTACT-->
         <section id="contact">
             <article class="text-container">
-         
                <header>
+                <h1>servicio al cliente</h1>
+                <h1><strong class="green">&#10004;</strong>  garant&iacute;a de <em class="em-circle">12</em> meses</h1>
                 <div class="networks">
                    <img src="assets/logo48.png" alt="nevecones" > 
                 </div>
-                
-                <h1>contacto</h1>
-                <div class="networks">
-                    <span class="mdi mdi-facebook" style="color:var(--indigo-accent-3)"></span>
-                    <span class="mdi mdi-whatsapp" style="color:var(--teal-accent-3)"></span>
-                    <span class="mdi mdi-gmail" style="color:var(--red-lighten-1)"></span> 
+                <h2>&aacute;rea metropolitana de Medell&iacute;n</h2>
+                <div class="centered-block">
+                    <i style="font-size:3rem;color:var(--red-darken-1)" class="mdi mdi-map-marker">
+                    </i>
+                    <button class="app-btn">ver mapa</button>
                 </div>
                </header>
-               <h1><strong class="green">&#10004;</strong>  garant&iacute;a de <em class="em-circle">12</em> meses</h1>
+               
                <h2>en todos tus electrodom&eacute;sticos de linea blanca</h2>
                 <article class="two-halves invert-color parallax">
                     <img src="assets/nevecon.png" alt="nevecones">
                     <img src="assets/lavadora.png" alt="nevecones">
                     <img src="assets/nevera.png" alt="nevecones">
                 </article>
-               <h3 style="text-align:right">preguntas frecuentes</h3> 
+            <summary class="two-halves">
+                <div>
+                    <h3 style="text-align:center">preguntas frecuentes</h3> 
+                    <article class="align-left">
+                        <p>-Que recargo tiene un domicilio al oriente?</p>
+                        <p>-Mi lavadora whirlpool no coordina bien los ciclos de lavado?</p>
+                        <p>-Atienden los domingos y festivos?</p>
+                        <p class="dash">Esto y mucho m&aacute;s en la secci&oacute;n de PQRS</p>  
+                    </article>
+             </div>
+                <div>
+                    <div>
+                        <h2>contacto - pqrs</h2>
+                        <div class="networks">
+                        <span class="mdi mdi-facebook" style="color:var(--indigo-accent-3)"></span>
+                        <span class="mdi mdi-whatsapp" style="color:var(--teal-accent-3)"></span>
+                        <span class="mdi mdi-gmail" style="color:var(--red-lighten-1)"></span> 
+                        </div>
+                    </div>
+                    <div class="centered-block">
+                      <p>ir a PQRS</p>
+                    <button class="app-btn-warning">
+                        pqrs
+                    </button>  
+                    </div>
+                    
+                </div>
+                
+            </summary>
+            
+               
             </article>
             <style>
+                @media(max-width:768px){
+                   .align-left{
+                    text-align: left;
+                   }
+                   
+                }
+                .dash{
+                    text-align: center;
+                    font-style: italic;
+                    font-size:1.5rem;
+                }
+                .dash::before{
+                    content:'¡'
+                }
+                .dash::after{
+                    content:'!'
+                }
+                .centered-block{
+                display:flex; 
+                flex-direction:column;
+                justify-content:center;
+                max-width:10rem;margin:auto;
+                text-align: center;
+                }
                 .invert-color{
                     border-top:2em solid var(--ms-bg-mid);
                     border-bottom:2em solid var(--ms-bg-mid);
@@ -283,17 +350,18 @@
              
             </style>
         </section>
-       
-        <section id="us" class="text-container">
-            <header>
+<!--ABOUT_SECTION-->    
+        <section id="us">
+            <header class="text-container">
                <h1 class="ms-text-stroke">
-                domicilios-tecnitec</span>
+                tecnitec
                 </h1> 
-                <h1>
-                    <i class="mdi mdi-wrench mdi-rotate-90"></i>
-                </h1>
+
+                <h2>
+                    <i class="mdi mdi-wrench mdi-rotate-45"></i>&nbsp;servicios domiciliarios
+                </h2>
             </header>
-            <main>
+            <main class="text-container">
             <article style="width:min(800px, 100%);margin:auto">
                 <h1>
                 mision
@@ -310,31 +378,37 @@
             </article>
             </main>
             <footer class="footer-container">
+                <div class="text-container">
                     <h1>
                     servicios
                     </h1>
+                    <h2>
+                         linea blanca
+                    </h2>
+                </div>
+                    
                 <summary class="two-halves">
                     <article class="card">
-                        <header>
+                        <header class="d-flex">
                          <h3>reparaci&oacute;n</h3>
                         <i class="mdi mdi-wrench"></i>   
                         </header>
                         
-                        <img src="assets/pt0.png" alt="" width="200">
-                        <footer>
+                        <img src="assets/pt0.png" alt="" width="160">
+                        <footer class="text-container">
                         <p>
                           Ofrecemos <em>Servicio T&eacute;cnico</em> especializado para tus electrodom&eacute;sticos, todos nuestros trabajos cuentan con garant&iacute;a.  
                         </p> 
                         </footer>
                     </article>
                     <article class="card">
-                        <header>
+                        <header class="d-flex">
                         <h3>mantenimiento</h3>
                         <i class="mdi mdi-puzzle"></i>  
                         </header>
                        
                         <img src="assets/pt1.png" alt="" width="200">
-                        <footer>
+                        <footer class="text-container">
                         <p>
                         Realizamos <em>Mantenimiento</em>  preventivo y adecuado, para que tus electrodom&eacute;sticos sigan funcionando adecuadamente. 
                         </p> 
@@ -342,13 +416,13 @@
                        
                     </article>
                     <article class="card">
-                        <header>
+                        <header class="d-flex">
                          <h3 >instalaci&oacute;n</h3>
                         <i class="mdi mdi-power-plug"></i>   
                         </header>
                         
                         <img src="assets/pt2.png" alt="" width="200">
-                        <footer>
+                        <footer class="text-container">
                          <p>
                             Realizamos la <em>Instalaci&oacute;n</em> responsable de tus electrodomésticos, para que funcionen correctamente y sean duraderos.
  
@@ -358,6 +432,26 @@
                     </article>
                 </summary>
                 <style>
+                    .d-flex{
+                        display:inline-flex;
+                        align-items:center;
+                        justify-content: center;
+                        border:3.5em solid transparent;
+                        gap:2.5em;
+                        margin:auto;
+                    }
+                    .d-flex h3{
+                        font-size: var(--extra-large);
+                        text-transform: capitalize;
+                    }
+                    .d-flex i{
+                        border:2px solid var(--amber-darken-4);
+                        padding:0.25em;
+                        border-radius: 50%;
+                        font-size: var(--larger);
+                        color:var(--amber-darken-4);
+
+                    }
                     .card{ 
                         border:0.25px solid var(--ms-bg-mid);
                         border-radius: 2rem;
@@ -375,7 +469,7 @@
                         border-bottom:0.25px solid var(--ms-bg-mid);
                         width:100%;
                         padding:1em;
-                        display:inline-flex;
+                        text-align: center;
                         background-color: var(--ms-background);
                         border-top-right-radius: 2rem;
                         border-top-left-radius:2rem;
@@ -394,15 +488,7 @@
                     .card h3{
                         color:var(--amber-darken-4);
                     }
-                    .card i{
-                        border:2px solid var(--amber-darken-4);
-                        margin:auto;
-
-                        padding:0.5rem;
-                        font-size: 3rem;
-                        color:var(--amber-darken-4);
-                        border-radius: 50%;
-                    }
+                    
                     .footer-container{
                         margin:1rem 2rem;
                     }
@@ -411,7 +497,8 @@
         </section>
     </main>
     <div class="parallax invert"></div>
-    <footer style="background-color:var(--ms-background);padding-top:2em; text-align: center;color:var(--ms-text)">
+<!--FOOT_END-->
+    <footer class="text-container" style="background-color:var(--ms-background);padding-top:2em; text-align: center;color:var(--ms-text)">
         <img src="assets/logos/tecnitec-logo.png" alt="servicio domiciliario medellin area metropolitana">
              
         <article class="two-halves">
@@ -421,11 +508,12 @@
                     <img src="assets/logo48.png" alt=""> 
                 </div>
                 <p>t&eacute;cnicos especializados en reparaci&oacute;n y mantenimiento de tus electrodom&eacute;sticos.</p>
-                <span style="color:var(--red-darken-1);font-size:48px" class="mdi mdi-map-marker-outline"></span>
-                <p>Medell&iacute;n - &Aacute;rea Metropolitana</p>
+                
             </div>
             <div class="foot-print">
                 <h3>domicilios</h3>
+                <span style="color:var(--red-darken-1);font-size:48px" class="mdi mdi-map-marker-outline"></span>
+                <p>Medell&iacute;n - &Aacute;rea Metropolitana</p>
                 <h4>lineas de atenci&oacute;n</h4>
                 <i class="mdi mdi-cellphone-iphone" style="font-size:48px;color:var(--amber-lighten-1)"></i>
                 <menu style="list-style-type:none">
@@ -474,7 +562,7 @@
     </style>
     <p style="padding:2em 0">Derechos - Reservados &#169; |&nbsp;TECNITEC ~ 2024&nbsp;|</p>
     </footer>
-
+<!--MODAL_WINDOW-->
     <dialog class="modal-mask hidden">  
         <main class="modal-contents">
             <h2>env&iacute;a un mensaje</h2>

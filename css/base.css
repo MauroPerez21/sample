@@ -77,7 +77,21 @@
       --color-text: var(--vt-c-text-dark-2);    
     }
   
-
+    :root{
+      --section-gap: 10ch;
+      --section-gap-small:2ch;
+      --spacing:1ch;
+      --word-space:normal;
+  }
+  :root{
+      --ms-text:var(--vt-c-white-soft);
+      --ms-background:var(--vt-c-black-soft);
+      --ms-bg-mid:var(--vt-c-text-light-2);
+      --ms-bg-dark:var(--vt-c-divider-light-0);
+      --ms-bg-light:var(--vt-c-text-dark-2);
+      --ms-red-shadow:var(--red-darken-4-75);
+      --ms-pink-shadow:var(--pink-darken-1-80);
+  }
   *,
   *::before,
   *::after {

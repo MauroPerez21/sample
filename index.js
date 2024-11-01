@@ -19,12 +19,17 @@ $(function(){
 });
 window.onload = hideModal()
 function hideModal(){
-  //document.getElementsByClassName("ul-collapse").display='none'
   console.log('hidden')
 }
+const form = document.querySelector('form')
 const qrContainer = document.getElementById('qr-container')
-new QRCode(qrContainer, 'www.tecnitec.com-bono-15%')
+const QR = new QRCode(qrContainer, 'www.tecnitec.com-bono-15%')
 
+form.addEventListener('submit',(e)=>{
+  e.preventDefault()
+  QR.makeCode(form.qrText.value)
+
+})
 /*
 window.addEventListener('scroll', ()=>{
   if (document.documentElement.scrollTop > 96){

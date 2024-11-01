@@ -1,0 +1,51 @@
+.text-container details{
+    padding-left: var(--indent-3-half);
+}
+.text-container blockquote{
+    padding-left:var(--indent-3);
+    font-style: oblique;
+}
+
+
+.ms-bolder{
+    text-transform: uppercase;
+    font-weight:900;
+}
+
+.h3-scope{
+    margin-top: var(--indent-1);
+    margin-bottom: var(--indent-1);  
+}
+.h3-scope, menu{
+    text-align: center;
+    font-size: var(--larger);
+    font-weight: 800;
+    letter-spacing: 0.125em;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.rainbow{
+    background: linear-gradient(to right, var(--red-darken-1), var(--amber-lighten-1));
+    -webkit-background-clip: text;
+    color:transparent; 
+}
+
+.dark-stroke{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--ms-text);
+    color:transparent;
+       
+  }
+.light-stroke{
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: var(--ms-background);
+    color:transparent;
+  }
+.dark-shadow{
+    text-shadow:2px 4px 10px var(--ms-text);
+  }
+.light-shadow{
+    text-shadow:4px 4px 10px var(--ms-background);
+  }
+ 

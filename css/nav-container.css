@@ -125,6 +125,12 @@
 .brand{
     margin:auto;
 }
+a{
+    font-size: 1rem;
+    text-decoration: none;
+    color:var(--ms-text);
+}
+
 .brand a, .ul-collapse li a{
     color:var(--ms-text);
     text-decoration: none;
@@ -134,6 +140,8 @@
     border-top:0.25em solid var(--ms-bg-mid); border-bottom:0.02em solid transparent;
     height:3rem;
     line-height: 3rem;
-    backdrop-filter: grayscale(100%);
-   background: linear-gradient(to bottom,var(--ms-background),var(--ms-bg-dark));
-}
+    backdrop-filter: blur(2px) grayscale(100%);
+  
+}/*
+ background-color: linear-gradient(to bottom,var(--ms-background),var(--ms-bg-dark));
+ */

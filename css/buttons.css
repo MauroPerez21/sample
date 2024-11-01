@@ -12,6 +12,63 @@
   color:var(--ms-text);
   font-weight: 800;
   cursor:pointer;
+  transition:background-color 0.3s ease;
+}
+.app-btn-success{
+  border:none;
+  padding:0 2em;
+  line-height: 2em;
+  background-color: var(--indigo-accent-3);
+  text-transform: uppercase;
+  letter-spacing: 0.25;
+  border-radius: var(--radius);
+  color:var(--ms-text);
+  font-weight: 800;
+  cursor:pointer;
+  transition:background-color 0.3s ease;
+
+}
+.app-btn-warning{
+  border:none;
+  padding:0 2em;
+  line-height: 2em;
+  background-color: var(--amber-darken-4);
+  text-transform: uppercase;
+  letter-spacing: 0.25;
+  border-radius: var(--radius);
+  color:var(--ms-text);
+  font-weight: 800;
+  cursor:pointer;
+  transition:background-color 0.3s ease;
+}
+.app-btn:hover{
+  background-color: var(--pink-darken-1);
+}
+.app-btn-success:hover{
+  background-color: var(--deep-purple-accent-4);
+} 
+.app-btn-warning:hover{
+  background-color: var(--amber-lighten-1);
+}
+input[type=text] {
+  width: 14rem;
+  box-sizing: border-box;
+  padding:0 1em;
+  border: 2px solid var(--ms-bg-mid);
+  border-radius: 4px;
+  font-size: var(--large);
+  background-color: var(--ms-text);
+  color:var(--ms-background);
+
+  
+}
+input[type=text]{
+  margin-top:2rem;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
 }
 .custom-select {
   display:grid;
