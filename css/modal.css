@@ -10,6 +10,14 @@
   backdrop-filter:blur(2px) grayscale(100%); 
   display: flex;
   transition: opacity 0.3s ease;
+  text-align: center;
+}
+.modal-mask main{
+  margin:0;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
 }
 .modal-contents{
   display:flex;

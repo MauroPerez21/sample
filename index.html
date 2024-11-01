@@ -9,18 +9,11 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
     <title>tecnitec</title>
-     <!--
-    <script src="https://unpkg.com/vue@3"></script>
-   
-      <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    </head>  
-    -->
     <script defer src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <script type="module" defer src="index.js"></script>
         
         <style>
-            body:has(option[value="dark"]:checked){
+            body:has(option[value="light"]:checked){
             background-color:var(--ms-background);
             color:var(--ms-text);
             }
@@ -120,7 +113,9 @@
                         </h2>
                                 
                             </div>
-                        <button id="toggle1" class="app-btn">window</button> 
+                        <button id="toggle1" class="app-btn">
+                            <i class="mdi mdi-whatsapp"></i>
+                            mensaje</button> 
                     </div>
                     <div>
                         <img src="assets/tecnico.png" alt="linea_blanca" width="250">
@@ -571,7 +566,7 @@
                 <i class="mdi mdi-whatsapp"
                 ></i>
             </a>
-           <button id="toggle2" class="app-btn">close</button>
+           <button id="toggle2" class="app-btn">cerrar</button>
         </main>
     </dialog>
 
